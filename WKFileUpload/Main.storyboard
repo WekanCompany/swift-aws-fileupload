@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NN3-s3-8BZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7nl-HK-obz">
+            <objects>
+                <navigationController id="NN3-s3-8BZ" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="7Gv-on-Ldp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Aog-V3-XN2" kind="relationship" relationship="rootViewController" id="MLC-aw-WSs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTv-YC-s0G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046" y="102"/>
+        </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="4pe-MV-iEd">
+            <objects>
+                <viewController storyboardIdentifier="AWSUploadViewController" id="Aog-V3-XN2" customClass="AWSUploadViewController" customModule="WKFileUpload" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ei-Tc-rVy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bZ-fZ-X3K">
+                                <rect key="frame" x="132" y="108" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="DBl-YH-bh5"/>
+                                    <constraint firstAttribute="height" constant="40" id="Lbk-PK-jw9"/>
+                                </constraints>
+                                <state key="normal" title="Select files"/>
+                                <connections>
+                                    <action selector="selectImagesAction:" destination="Aog-V3-XN2" eventType="touchUpInside" id="Cvd-hT-zJS"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PbD-8t-udg">
+                                <rect key="frame" x="40" y="210" width="334" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JLe-UK-HaB">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="estimatedItemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="ImageCell" id="kXS-6y-ZHy" customClass="ImageCollectionViewCell" customModule="WKFileUpload" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="Bsu-Fd-v7R">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-oY-0eC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="ABG-v3-E8g"/>
+                                                        <constraint firstAttribute="height" constant="100" id="yde-4G-yhe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5lQ-9e-Fok">
+                                                    <rect key="frame" x="5" y="49" width="90" height="2"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="yqt-Qr-3xm"/>
+                                                    </constraints>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko7-vG-9iH">
+                                                    <rect key="frame" x="5" y="71" width="90" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Kj-oY-0eC" firstAttribute="leading" secondItem="Bsu-Fd-v7R" secondAttribute="leading" id="24B-MN-9tV"/>
+                                                <constraint firstItem="5lQ-9e-Fok" firstAttribute="leading" secondItem="Bsu-Fd-v7R" secondAttribute="leading" constant="5" id="4vb-Y7-fNj"/>
+                                                <constraint firstItem="7Kj-oY-0eC" firstAttribute="top" secondItem="Bsu-Fd-v7R" secondAttribute="top" id="KEc-Sj-Y2x"/>
+                                                <constraint firstAttribute="trailing" secondItem="7Kj-oY-0eC" secondAttribute="trailing" id="Lzf-AO-tjL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ko7-vG-9iH" secondAttribute="trailing" constant="5" id="Nni-E3-9Cq"/>
+                                                <constraint firstAttribute="trailing" secondItem="5lQ-9e-Fok" secondAttribute="trailing" constant="5" id="R81-Jo-tUx"/>
+                                                <constraint firstItem="5lQ-9e-Fok" firstAttribute="centerY" secondItem="Bsu-Fd-v7R" secondAttribute="centerY" id="hpr-88-sZv"/>
+                                                <constraint firstAttribute="bottom" secondItem="7Kj-oY-0eC" secondAttribute="bottom" id="iSL-fJ-Zte"/>
+                                                <constraint firstItem="Ko7-vG-9iH" firstAttribute="leading" secondItem="Bsu-Fd-v7R" secondAttribute="leading" constant="5" id="osB-u6-cwy"/>
+                                                <constraint firstItem="Ko7-vG-9iH" firstAttribute="top" secondItem="5lQ-9e-Fok" secondAttribute="bottom" constant="20" id="p1T-G2-e6I"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="7Kj-oY-0eC" id="9WP-EM-Vef"/>
+                                            <outlet property="progressView" destination="5lQ-9e-Fok" id="v21-lc-ibg"/>
+                                            <outlet property="statusLabel" destination="Ko7-vG-9iH" id="f4g-23-9s6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Aog-V3-XN2" id="gsD-ul-dDg"/>
+                                    <outlet property="delegate" destination="Aog-V3-XN2" id="FOo-RA-S2v"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3bZ-fZ-X3K" firstAttribute="centerX" secondItem="6ei-Tc-rVy" secondAttribute="centerX" id="BMT-VL-cjz"/>
+                            <constraint firstItem="PbD-8t-udg" firstAttribute="leading" secondItem="4RQ-uv-ZXr" secondAttribute="leading" constant="40" id="BWR-Sc-Fud"/>
+                            <constraint firstItem="PbD-8t-udg" firstAttribute="bottom" secondItem="4RQ-uv-ZXr" secondAttribute="bottom" id="RKi-lu-fTw"/>
+                            <constraint firstItem="3bZ-fZ-X3K" firstAttribute="top" secondItem="4RQ-uv-ZXr" secondAttribute="top" constant="20" id="a5q-nw-H7f"/>
+                            <constraint firstItem="PbD-8t-udg" firstAttribute="top" secondItem="3bZ-fZ-X3K" secondAttribute="bottom" constant="62" id="hat-To-s6f"/>
+                            <constraint firstItem="PbD-8t-udg" firstAttribute="centerX" secondItem="6ei-Tc-rVy" secondAttribute="centerX" id="z5n-uO-MDo"/>
+                            <constraint firstItem="4RQ-uv-ZXr" firstAttribute="trailing" secondItem="PbD-8t-udg" secondAttribute="trailing" constant="40" id="zRz-Tk-n2m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4RQ-uv-ZXr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EHc-0i-yR8">
+                        <barButtonItem key="rightBarButtonItem" title="Upload" id="hsH-Io-VCv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="uploadAction:" destination="Aog-V3-XN2" id="jtu-sz-A0B"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collViewFlowLayout" destination="JLe-UK-HaB" id="t68-RE-qmZ"/>
+                        <outlet property="imagesCollectionView" destination="PbD-8t-udg" id="iss-kN-9qR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6h-Ec-3Vv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68.115942028985515" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>

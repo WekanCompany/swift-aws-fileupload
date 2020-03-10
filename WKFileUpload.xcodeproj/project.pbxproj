@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		553A1984F2D199E364D0D6F6 /* Pods_WKFileUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7881DB065066C164CE8AB703 /* Pods_WKFileUploadTests.framework */; };
+		E0811F80855E2F2E0F6F1D6A /* Pods_WKFileUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0587F7130C312073251920DA /* Pods_WKFileUpload.framework */; };
+		E66A061993607BE309089FD2 /* Pods_WKFileUpload_WKFileUploadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0948028AD1D340EBA2E853 /* Pods_WKFileUpload_WKFileUploadUITests.framework */; };
+		F508C44323432D4900CF76C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C44223432D4900CF76C7 /* AppDelegate.swift */; };
+		F508C44823432D4900CF76C7 /* WKFileUpload.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F508C44623432D4900CF76C7 /* WKFileUpload.xcdatamodeld */; };
+		F508C44C23432D4B00CF76C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508C44B23432D4B00CF76C7 /* Assets.xcassets */; };
+		F508C44F23432D4B00CF76C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F508C44E23432D4B00CF76C7 /* Preview Assets.xcassets */; };
+		F508C45223432D4B00CF76C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508C45023432D4B00CF76C7 /* LaunchScreen.storyboard */; };
+		F508C45D23432D4B00CF76C7 /* WKFileUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C45C23432D4B00CF76C7 /* WKFileUploadTests.swift */; };
+		F508C46823432D4B00CF76C7 /* WKFileUploadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C46723432D4B00CF76C7 /* WKFileUploadUITests.swift */; };
+		F508C4782343346900CF76C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F508C4772343346900CF76C7 /* Main.storyboard */; };
+		F508C47A234334C400CF76C7 /* AWSUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C479234334C400CF76C7 /* AWSUploadViewController.swift */; };
+		F508C47C2343352F00CF76C7 /* AWSUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C47B2343352F00CF76C7 /* AWSUploadViewModel.swift */; };
+		F508C47E2343355300CF76C7 /* AWSUploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C47D2343355300CF76C7 /* AWSUploadFile.swift */; };
+		F508C480234335A500CF76C7 /* AWSUploadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C47F234335A500CF76C7 /* AWSUploadManager.swift */; };
+		F508C4842343361B00CF76C7 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C4832343361B00CF76C7 /* ImageCollectionViewCell.swift */; };
+		F508C4862343368700CF76C7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C4852343368700CF76C7 /* Constants.swift */; };
+		F508C488234355DD00CF76C7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F508C487234355DD00CF76C7 /* Helper.swift */; };
+		F557EBB5234C8F0E0029748A /* AWSUploadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F557EBB4234C8F0E0029748A /* AWSUploadTests.swift */; };
+		F5F6F6382345D05700BC2261 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F6F6372345D05700BC2261 /* NetworkExtension.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F508C45923432D4B00CF76C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F508C43723432D4900CF76C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F508C43E23432D4900CF76C7;
+			remoteInfo = WKFileUpload;
+		};
+		F508C46423432D4B00CF76C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F508C43723432D4900CF76C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F508C43E23432D4900CF76C7;
+			remoteInfo = WKFileUpload;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0587F7130C312073251920DA /* Pods_WKFileUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKFileUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAF48F905CED0A16DB65A6C /* Pods-WKFileUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload.debug.xcconfig"; path = "Target Support Files/Pods-WKFileUpload/Pods-WKFileUpload.debug.xcconfig"; sourceTree = "<group>"; };
+		7664C5423FC96D3175772149 /* Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig"; path = "Target Support Files/Pods-WKFileUpload-WKFileUploadUITests/Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7881DB065066C164CE8AB703 /* Pods_WKFileUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKFileUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8BE43A966831FBB12D5DA3 /* Pods-WKFileUploadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUploadTests.debug.xcconfig"; path = "Target Support Files/Pods-WKFileUploadTests/Pods-WKFileUploadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BBD53FBAC7B2408FCDEE165 /* Pods-WKFileUpload-WKFileUploadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload-WKFileUploadUITests.debug.xcconfig"; path = "Target Support Files/Pods-WKFileUpload-WKFileUploadUITests/Pods-WKFileUpload-WKFileUploadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD4768582F56D95C1804DBBF /* Pods-WKFileUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload.release.xcconfig"; path = "Target Support Files/Pods-WKFileUpload/Pods-WKFileUpload.release.xcconfig"; sourceTree = "<group>"; };
+		F41B4C1DD0FB7D0127727B38 /* Pods-WKFileUploadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUploadTests.release.xcconfig"; path = "Target Support Files/Pods-WKFileUploadTests/Pods-WKFileUploadTests.release.xcconfig"; sourceTree = "<group>"; };
+		F508C43F23432D4900CF76C7 /* WKFileUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKFileUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F508C44223432D4900CF76C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F508C44723432D4900CF76C7 /* WKFileUpload.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WKFileUpload.xcdatamodel; sourceTree = "<group>"; };
+		F508C44B23432D4B00CF76C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F508C44E23432D4B00CF76C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F508C45123432D4B00CF76C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F508C45323432D4B00CF76C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F508C45823432D4B00CF76C7 /* WKFileUploadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKFileUploadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F508C45C23432D4B00CF76C7 /* WKFileUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKFileUploadTests.swift; sourceTree = "<group>"; };
+		F508C45E23432D4B00CF76C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F508C46323432D4B00CF76C7 /* WKFileUploadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKFileUploadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F508C46723432D4B00CF76C7 /* WKFileUploadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKFileUploadUITests.swift; sourceTree = "<group>"; };
+		F508C46923432D4B00CF76C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F508C4772343346900CF76C7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F508C479234334C400CF76C7 /* AWSUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUploadViewController.swift; sourceTree = "<group>"; };
+		F508C47B2343352F00CF76C7 /* AWSUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUploadViewModel.swift; sourceTree = "<group>"; };
+		F508C47D2343355300CF76C7 /* AWSUploadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUploadFile.swift; sourceTree = "<group>"; };
+		F508C47F234335A500CF76C7 /* AWSUploadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUploadManager.swift; sourceTree = "<group>"; };
+		F508C4832343361B00CF76C7 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		F508C4852343368700CF76C7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F508C487234355DD00CF76C7 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F557EBB4234C8F0E0029748A /* AWSUploadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUploadTests.swift; sourceTree = "<group>"; };
+		F5F6F6362345D04500BC2261 /* WKFileUpload.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WKFileUpload.entitlements; sourceTree = "<group>"; };
+		F5F6F6372345D05700BC2261 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		FC0948028AD1D340EBA2E853 /* Pods_WKFileUpload_WKFileUploadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKFileUpload_WKFileUploadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F508C43C23432D4900CF76C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0811F80855E2F2E0F6F1D6A /* Pods_WKFileUpload.framework in Frameworks */,
+				F5F6F6382345D05700BC2261 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C45523432D4B00CF76C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				553A1984F2D199E364D0D6F6 /* Pods_WKFileUploadTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C46023432D4B00CF76C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A061993607BE309089FD2 /* Pods_WKFileUpload_WKFileUploadUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41D68E0626F6E841177276FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AAF48F905CED0A16DB65A6C /* Pods-WKFileUpload.debug.xcconfig */,
+				CD4768582F56D95C1804DBBF /* Pods-WKFileUpload.release.xcconfig */,
+				9BBD53FBAC7B2408FCDEE165 /* Pods-WKFileUpload-WKFileUploadUITests.debug.xcconfig */,
+				7664C5423FC96D3175772149 /* Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig */,
+				9A8BE43A966831FBB12D5DA3 /* Pods-WKFileUploadTests.debug.xcconfig */,
+				F41B4C1DD0FB7D0127727B38 /* Pods-WKFileUploadTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7902A821B2B63077D6263339 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5F6F6372345D05700BC2261 /* NetworkExtension.framework */,
+				0587F7130C312073251920DA /* Pods_WKFileUpload.framework */,
+				FC0948028AD1D340EBA2E853 /* Pods_WKFileUpload_WKFileUploadUITests.framework */,
+				7881DB065066C164CE8AB703 /* Pods_WKFileUploadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F508C43623432D4900CF76C7 = {
+			isa = PBXGroup;
+			children = (
+				F508C44123432D4900CF76C7 /* WKFileUpload */,
+				F508C45B23432D4B00CF76C7 /* WKFileUploadTests */,
+				F508C46623432D4B00CF76C7 /* WKFileUploadUITests */,
+				F508C44023432D4900CF76C7 /* Products */,
+				41D68E0626F6E841177276FE /* Pods */,
+				7902A821B2B63077D6263339 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F508C44023432D4900CF76C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F508C43F23432D4900CF76C7 /* WKFileUpload.app */,
+				F508C45823432D4B00CF76C7 /* WKFileUploadTests.xctest */,
+				F508C46323432D4B00CF76C7 /* WKFileUploadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F508C44123432D4900CF76C7 /* WKFileUpload */ = {
+			isa = PBXGroup;
+			children = (
+				F508C44223432D4900CF76C7 /* AppDelegate.swift */,
+				F508C4852343368700CF76C7 /* Constants.swift */,
+				F52290E52359ACBC00748DC0 /* Common */,
+				F52290E42359ACA900748DC0 /* MVVM */,
+				F508C4762343344B00CF76C7 /* Storyboards */,
+				F508C4752343342F00CF76C7 /* Supporting Files */,
+				F508C44D23432D4B00CF76C7 /* Preview Content */,
+			);
+			path = WKFileUpload;
+			sourceTree = "<group>";
+		};
+		F508C44D23432D4B00CF76C7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F508C44E23432D4B00CF76C7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F508C45B23432D4B00CF76C7 /* WKFileUploadTests */ = {
+			isa = PBXGroup;
+			children = (
+				F508C45C23432D4B00CF76C7 /* WKFileUploadTests.swift */,
+				F557EBB4234C8F0E0029748A /* AWSUploadTests.swift */,
+				F508C45E23432D4B00CF76C7 /* Info.plist */,
+			);
+			path = WKFileUploadTests;
+			sourceTree = "<group>";
+		};
+		F508C46623432D4B00CF76C7 /* WKFileUploadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F508C46723432D4B00CF76C7 /* WKFileUploadUITests.swift */,
+				F508C46923432D4B00CF76C7 /* Info.plist */,
+			);
+			path = WKFileUploadUITests;
+			sourceTree = "<group>";
+		};
+		F508C4752343342F00CF76C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F6F6362345D04500BC2261 /* WKFileUpload.entitlements */,
+				F508C45323432D4B00CF76C7 /* Info.plist */,
+				F508C44B23432D4B00CF76C7 /* Assets.xcassets */,
+				F508C44623432D4900CF76C7 /* WKFileUpload.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F508C4762343344B00CF76C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F508C45023432D4B00CF76C7 /* LaunchScreen.storyboard */,
+				F508C4772343346900CF76C7 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		F508C481234335BC00CF76C7 /* Upload Module */ = {
+			isa = PBXGroup;
+			children = (
+				F508C479234334C400CF76C7 /* AWSUploadViewController.swift */,
+				F508C47B2343352F00CF76C7 /* AWSUploadViewModel.swift */,
+				F508C47D2343355300CF76C7 /* AWSUploadFile.swift */,
+				F508C4832343361B00CF76C7 /* ImageCollectionViewCell.swift */,
+			);
+			path = "Upload Module";
+			sourceTree = "<group>";
+		};
+		F52290E42359ACA900748DC0 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F508C481234335BC00CF76C7 /* Upload Module */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		F52290E52359ACBC00748DC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F508C487234355DD00CF76C7 /* Helper.swift */,
+				F508C47F234335A500CF76C7 /* AWSUploadManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F508C43E23432D4900CF76C7 /* WKFileUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F508C46C23432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUpload" */;
+			buildPhases = (
+				052C04400056FFD3C283F991 /* [CP] Check Pods Manifest.lock */,
+				F508C43B23432D4900CF76C7 /* Sources */,
+				F508C43C23432D4900CF76C7 /* Frameworks */,
+				F508C43D23432D4900CF76C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WKFileUpload;
+			productName = WKFileUpload;
+			productReference = F508C43F23432D4900CF76C7 /* WKFileUpload.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F508C45723432D4B00CF76C7 /* WKFileUploadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F508C46F23432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUploadTests" */;
+			buildPhases = (
+				1E29550C824EDEBC6D1A82DE /* [CP] Check Pods Manifest.lock */,
+				F508C45423432D4B00CF76C7 /* Sources */,
+				F508C45523432D4B00CF76C7 /* Frameworks */,
+				F508C45623432D4B00CF76C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F508C45A23432D4B00CF76C7 /* PBXTargetDependency */,
+			);
+			name = WKFileUploadTests;
+			productName = WKFileUploadTests;
+			productReference = F508C45823432D4B00CF76C7 /* WKFileUploadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F508C46223432D4B00CF76C7 /* WKFileUploadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F508C47223432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUploadUITests" */;
+			buildPhases = (
+				F6B638DE189D25A03457A8C9 /* [CP] Check Pods Manifest.lock */,
+				F508C45F23432D4B00CF76C7 /* Sources */,
+				F508C46023432D4B00CF76C7 /* Frameworks */,
+				F508C46123432D4B00CF76C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F508C46523432D4B00CF76C7 /* PBXTargetDependency */,
+			);
+			name = WKFileUploadUITests;
+			productName = WKFileUploadUITests;
+			productReference = F508C46323432D4B00CF76C7 /* WKFileUploadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F508C43723432D4900CF76C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = WeKan;
+				TargetAttributes = {
+					F508C43E23432D4900CF76C7 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					F508C45723432D4B00CF76C7 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = F508C43E23432D4900CF76C7;
+					};
+					F508C46223432D4B00CF76C7 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = F508C43E23432D4900CF76C7;
+					};
+				};
+			};
+			buildConfigurationList = F508C43A23432D4900CF76C7 /* Build configuration list for PBXProject "WKFileUpload" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F508C43623432D4900CF76C7;
+			productRefGroup = F508C44023432D4900CF76C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F508C43E23432D4900CF76C7 /* WKFileUpload */,
+				F508C45723432D4B00CF76C7 /* WKFileUploadTests */,
+				F508C46223432D4B00CF76C7 /* WKFileUploadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F508C43D23432D4900CF76C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F508C45223432D4B00CF76C7 /* LaunchScreen.storyboard in Resources */,
+				F508C44F23432D4B00CF76C7 /* Preview Assets.xcassets in Resources */,
+				F508C44C23432D4B00CF76C7 /* Assets.xcassets in Resources */,
+				F508C4782343346900CF76C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C45623432D4B00CF76C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C46123432D4B00CF76C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		052C04400056FFD3C283F991 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WKFileUpload-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E29550C824EDEBC6D1A82DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WKFileUploadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B638DE189D25A03457A8C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WKFileUpload-WKFileUploadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F508C43B23432D4900CF76C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F508C480234335A500CF76C7 /* AWSUploadManager.swift in Sources */,
+				F508C44323432D4900CF76C7 /* AppDelegate.swift in Sources */,
+				F508C47E2343355300CF76C7 /* AWSUploadFile.swift in Sources */,
+				F508C4842343361B00CF76C7 /* ImageCollectionViewCell.swift in Sources */,
+				F508C44823432D4900CF76C7 /* WKFileUpload.xcdatamodeld in Sources */,
+				F508C488234355DD00CF76C7 /* Helper.swift in Sources */,
+				F508C47A234334C400CF76C7 /* AWSUploadViewController.swift in Sources */,
+				F508C47C2343352F00CF76C7 /* AWSUploadViewModel.swift in Sources */,
+				F508C4862343368700CF76C7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C45423432D4B00CF76C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F557EBB5234C8F0E0029748A /* AWSUploadTests.swift in Sources */,
+				F508C45D23432D4B00CF76C7 /* WKFileUploadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F508C45F23432D4B00CF76C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F508C46823432D4B00CF76C7 /* WKFileUploadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F508C45A23432D4B00CF76C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F508C43E23432D4900CF76C7 /* WKFileUpload */;
+			targetProxy = F508C45923432D4B00CF76C7 /* PBXContainerItemProxy */;
+		};
+		F508C46523432D4B00CF76C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F508C43E23432D4900CF76C7 /* WKFileUpload */;
+			targetProxy = F508C46423432D4B00CF76C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F508C45023432D4B00CF76C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F508C45123432D4B00CF76C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F508C46A23432D4B00CF76C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F508C46B23432D4B00CF76C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F508C46D23432D4B00CF76C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AAF48F905CED0A16DB65A6C /* Pods-WKFileUpload.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WKFileUpload/WKFileUpload.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WKFileUpload/Preview Content\"";
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WKFileUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WKFileUploadDev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F508C46E23432D4B00CF76C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD4768582F56D95C1804DBBF /* Pods-WKFileUpload.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WKFileUpload/WKFileUpload.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"WKFileUpload/Preview Content\"";
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WKFileUpload/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WKFileUploadDev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F508C47023432D4B00CF76C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8BE43A966831FBB12D5DA3 /* Pods-WKFileUploadTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				INFOPLIST_FILE = WKFileUploadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUploadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WKFileUpload.app/WKFileUpload";
+			};
+			name = Debug;
+		};
+		F508C47123432D4B00CF76C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41B4C1DD0FB7D0127727B38 /* Pods-WKFileUploadTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				INFOPLIST_FILE = WKFileUploadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUploadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WKFileUpload.app/WKFileUpload";
+			};
+			name = Release;
+		};
+		F508C47323432D4B00CF76C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BBD53FBAC7B2408FCDEE165 /* Pods-WKFileUpload-WKFileUploadUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				INFOPLIST_FILE = WKFileUploadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUploadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WKFileUpload;
+			};
+			name = Debug;
+		};
+		F508C47423432D4B00CF76C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7664C5423FC96D3175772149 /* Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H972GMBYZ9;
+				INFOPLIST_FILE = WKFileUploadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wekancode.WKFileUploadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WKFileUpload;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F508C43A23432D4900CF76C7 /* Build configuration list for PBXProject "WKFileUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F508C46A23432D4B00CF76C7 /* Debug */,
+				F508C46B23432D4B00CF76C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F508C46C23432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F508C46D23432D4B00CF76C7 /* Debug */,
+				F508C46E23432D4B00CF76C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F508C46F23432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUploadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F508C47023432D4B00CF76C7 /* Debug */,
+				F508C47123432D4B00CF76C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F508C47223432D4B00CF76C7 /* Build configuration list for PBXNativeTarget "WKFileUploadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F508C47323432D4B00CF76C7 /* Debug */,
+				F508C47423432D4B00CF76C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F508C44623432D4900CF76C7 /* WKFileUpload.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F508C44723432D4900CF76C7 /* WKFileUpload.xcdatamodel */,
+			);
+			currentVersion = F508C44723432D4900CF76C7 /* WKFileUpload.xcdatamodel */;
+			path = WKFileUpload.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F508C43723432D4900CF76C7 /* Project object */;
+}
