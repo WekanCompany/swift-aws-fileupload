@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081E51D92417D38B006CF260 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081E51D82417D38B006CF260 /* Dynamic.swift */; };
 		553A1984F2D199E364D0D6F6 /* Pods_WKFileUploadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7881DB065066C164CE8AB703 /* Pods_WKFileUploadTests.framework */; };
 		E0811F80855E2F2E0F6F1D6A /* Pods_WKFileUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0587F7130C312073251920DA /* Pods_WKFileUpload.framework */; };
 		E66A061993607BE309089FD2 /* Pods_WKFileUpload_WKFileUploadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0948028AD1D340EBA2E853 /* Pods_WKFileUpload_WKFileUploadUITests.framework */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0587F7130C312073251920DA /* Pods_WKFileUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKFileUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		081E51D82417D38B006CF260 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		3AAF48F905CED0A16DB65A6C /* Pods-WKFileUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload.debug.xcconfig"; path = "Target Support Files/Pods-WKFileUpload/Pods-WKFileUpload.debug.xcconfig"; sourceTree = "<group>"; };
 		7664C5423FC96D3175772149 /* Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig"; path = "Target Support Files/Pods-WKFileUpload-WKFileUploadUITests/Pods-WKFileUpload-WKFileUploadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7881DB065066C164CE8AB703 /* Pods_WKFileUploadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKFileUploadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,9 +223,9 @@
 		F508C481234335BC00CF76C7 /* Upload Module */ = {
 			isa = PBXGroup;
 			children = (
-				F508C479234334C400CF76C7 /* AWSUploadViewController.swift */,
-				F508C47B2343352F00CF76C7 /* AWSUploadViewModel.swift */,
 				F508C47D2343355300CF76C7 /* AWSUploadFile.swift */,
+				F508C47B2343352F00CF76C7 /* AWSUploadViewModel.swift */,
+				F508C479234334C400CF76C7 /* AWSUploadViewController.swift */,
 				F508C4832343361B00CF76C7 /* ImageCollectionViewCell.swift */,
 			);
 			path = "Upload Module";
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				F508C487234355DD00CF76C7 /* Helper.swift */,
+				081E51D82417D38B006CF260 /* Dynamic.swift */,
 				F508C47F234335A500CF76C7 /* AWSUploadManager.swift */,
 			);
 			path = Common;
@@ -451,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F508C480234335A500CF76C7 /* AWSUploadManager.swift in Sources */,
+				081E51D92417D38B006CF260 /* Dynamic.swift in Sources */,
 				F508C44323432D4900CF76C7 /* AppDelegate.swift in Sources */,
 				F508C47E2343355300CF76C7 /* AWSUploadFile.swift in Sources */,
 				F508C4842343361B00CF76C7 /* ImageCollectionViewCell.swift in Sources */,
@@ -632,6 +636,7 @@
 				DEVELOPMENT_TEAM = H972GMBYZ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WKFileUpload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,7 +645,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = WKFileUploadDev;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -656,6 +661,7 @@
 				DEVELOPMENT_TEAM = H972GMBYZ9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WKFileUpload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = WKFileUploadDev;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

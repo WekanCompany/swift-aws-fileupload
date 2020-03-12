@@ -11,8 +11,12 @@ import Foundation
 import Photos
 
 class AWSUploadViewModel {
+    ///Array of image assets selected from photo library
     var selectedImageAssets: [PHAsset] = []
-    var imageModelArray: [AWSUploadFile] = []
+    ///Array of images captured from camera. Array items are of type  AWSUploadFile
+    var capturedImages: [AWSUploadFile] = []
+    ///Array of all images selected from camera/photolibrary to upload. Array items are of type  AWSUploadFile
+    var filesArray: [AWSUploadFile] = []
 
     @objc var completionHandler: AWSS3TransferUtilityMultiPartUploadCompletionHandlerBlock?
     @objc var progressBlock: AWSS3TransferUtilityMultiPartProgressBlock?
@@ -26,11 +30,9 @@ class AWSUploadViewModel {
         case .notDetermined:
             PHPhotoLibrary.requestAuthorization({ (newStatus) in print("status is \(newStatus)")
                 if newStatus == PHAuthorizationStatus.authorized {
-                    // do stuff here */
                     print("success")
                 }
             })
-            
         case .restricted:
             print("User do not have access to photo album.")
             
@@ -44,7 +46,7 @@ class AWSUploadViewModel {
     
     /// method that initiates the upload of files to s3
     func uploadFiles(forController viewController: AWSUploadViewController) {
-        AWSUploadManager.shared.uploadFiles(files: self.imageModelArray, fromController: viewController, success: { (uploadFile) in
+        AWSUploadManager.shared.uploadFiles(files: self.filesArray, fromController: viewController, success: { (uploadFile) in
             print(uploadFile)
         }, failure: { (errorMessage) in
             print(errorMessage)

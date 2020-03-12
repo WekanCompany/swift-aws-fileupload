@@ -12,7 +12,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var statusLabel: UILabel!
-    
+    @IBOutlet var deleteBtn: UIButton!
+
     override func awakeFromNib() {
            super.awakeFromNib()
            // Initialization code
@@ -23,6 +24,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     func configureCell(imageModel: AWSUploadFile) {
         self.imageView.image = UIImage(data: imageModel.fileData!)
         self.updateProgress(imageModel: imageModel)
+        self.deleteBtn.tag = imageModel.fileIndex
      }
     
     /// update upload progress in cell

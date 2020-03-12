@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
+import AWSS3
 
 /// The Cognito pool Identifier for the IAM user
-let s3CognitoIdentityPoolId: String = ""
+let s3CognitoIdentityPoolId: String =  ""
 /// Name of the folder to which files should be uploaded
 let s3BucketName: String = ""
+///  The region in which our identity pool exists
+let s3RegionType: AWSRegionType = .USEast1
 /// Name of file to be uploaded
 let s3UploadKeyName: String = "public/testimage.png"
 /// A name identifier for the transer service
@@ -41,7 +44,7 @@ enum UploadStatus: Int {
 
 ///List of constants that define the maximum limits
 struct Maximum {
-   static let uploadFileCount = 10
+   static let uploadFileCount = 5
 }
 
 struct NotificationName {

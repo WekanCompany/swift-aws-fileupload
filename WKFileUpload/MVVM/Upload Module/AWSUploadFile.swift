@@ -15,6 +15,7 @@ class AWSUploadFile: Codable {
     var uploadStatus: Int!
     var fileType: String?
     var s3UrlPath: String?
+    var fileName: String!
 
     private enum CodingKeys: String, CodingKey {
         case fileData
@@ -23,6 +24,7 @@ class AWSUploadFile: Codable {
         case uploadStatus
         case fileType
         case s3UrlPath
+        case fileName
     }
 
     init() {
@@ -31,6 +33,7 @@ class AWSUploadFile: Codable {
         self.uploadProgress = 0.0
         self.uploadStatus = 0
         self.s3UrlPath = ""
+        self.fileName = ""
     }
     
     // MARK: - Codable
@@ -43,6 +46,7 @@ class AWSUploadFile: Codable {
        try container.encodeIfPresent(uploadStatus, forKey: .uploadStatus)
        try container.encodeIfPresent(fileType, forKey: .fileType)
        try container.encodeIfPresent(s3UrlPath, forKey: .s3UrlPath)
+       try container.encodeIfPresent(fileName, forKey: .fileName)
    }
     
     required init(from decoder: Decoder) throws {
@@ -53,6 +57,7 @@ class AWSUploadFile: Codable {
         uploadStatus = try container.decodeIfPresent(Int.self, forKey: .uploadStatus)
         fileType = try container.decodeIfPresent(String.self, forKey: .fileType)
         s3UrlPath = try container.decodeIfPresent(String.self, forKey: .s3UrlPath)
+        fileName = try container.decodeIfPresent(String.self, forKey: .fileName)
     }
 
 }
