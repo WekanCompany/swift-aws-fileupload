@@ -7,9 +7,9 @@ target 'WKFileUpload' do
 
   # Pods for BackgroundQueue
   $awsVersion = '~> 2.12.0'
-#  pod 'AWSMobileClient', $awsVersion
-#  pod 'AWSS3', $awsVersion
-#  pod 'AssetsPickerViewController', '~> 2.0'
+  pod 'AWSMobileClient', $awsVersion
+  pod 'AWSS3', $awsVersion
+  pod 'AssetsPickerViewController', '~> 2.0'
 
   # Pods for WKFileUpload
 

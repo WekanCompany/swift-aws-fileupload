@@ -23,7 +23,7 @@ class WKFileUploadTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-     /// Test to check if the Signup API succeeds with all values given correctly
+     /// Test to check if the image upload works
     func testIfImageUploadIsWorking() {
         var filesArray: [AWSUploadFile] = []
         for index in 0...1 {
