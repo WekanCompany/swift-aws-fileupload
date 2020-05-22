@@ -13,6 +13,8 @@ class AWSUploadManager {
     static let shared = AWSUploadManager()
     /// Array of files to be uploaded
     var filesToUpload: [AWSUploadFile] = []
+    /// Flag that says whether files should be encrypted while uploading
+    var shouldEncrypt = false
     /// the completion handler block for file upload
     @objc var completionHandler: AWSS3TransferUtilityMultiPartUploadCompletionHandlerBlock?
     /// the block for upload progress
@@ -32,7 +34,8 @@ class AWSUploadManager {
 
           //Setup the aws service configuration
           let configuration = AWSServiceConfiguration(region: s3RegionType, credentialsProvider: credentialProvider)
-          AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
 
           //Setup the transfer utility configuration
           let tuConf = AWSS3TransferUtilityConfiguration()
@@ -57,9 +60,11 @@ class AWSUploadManager {
     /// - Parameter viewController: the viewcontroller that initiated the upload. Progress updates will be send back to this viewcontroller
     func uploadFiles(files: [AWSUploadFile],
                      fromController viewController: AWSUploadViewController,
+                     shouldEncrypt encryptFile: Bool? = nil,
                      success onSuccess: @escaping OnUploadSuccess ,
                      failure onFailure: @escaping OnUploadFailure) {
         UIApplication.shared.runInBackground({
+              self.shouldEncrypt = encryptFile ?? false
               self.filesToUpload = files
               for index in 0..<self.filesToUpload.count {
                 self.uploadFile(atIndex: index, fromController: viewController, success: { (uploadFile) in
@@ -125,6 +130,10 @@ class AWSUploadManager {
         
         // Upload using multipart and assign the progress and completion blocks
         let expression = AWSS3TransferUtilityMultiPartUploadExpression()
+        expression.setValue("public-read-write", forRequestHeader: "x-amz-acl")
+        if shouldEncrypt {
+            expression.setValue("aws:kms", forRequestHeader: "s3:x-amz-server-side-encryption")
+        }
         expression.progressBlock = self.progressBlock
         self.transferUtility.uploadUsingMultiPart(data: file.fileData!,
                                                   bucket: s3BucketName,

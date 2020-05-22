@@ -1,3 +1,50 @@
-PODFILE CHECKSUM: 18d98065f43e3578d7fbcda49003402beba6ec7e
+PODS:
+  - AssetsPickerViewController (2.7.5):
+    - Device
+    - SnapKit
+  - AWSAuthCore (2.12.7):
+    - AWSCore (= 2.12.7)
+  - AWSCognitoIdentityProvider (2.12.7):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.12.7)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.12.7)
+  - AWSMobileClient (2.12.7):
+    - AWSAuthCore (= 2.12.7)
+    - AWSCognitoIdentityProvider (= 2.12.7)
+  - AWSS3 (2.12.7):
+    - AWSCore (= 2.12.7)
+  - Device (3.2.1)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - AssetsPickerViewController (~> 2.0)
+  - AWSMobileClient (~> 2.12.0)
+  - AWSS3 (~> 2.12.0)
+
+SPEC REPOS:
+  trunk:
+    - AssetsPickerViewController
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSS3
+    - Device
+    - SnapKit
+
+SPEC CHECKSUMS:
+  AssetsPickerViewController: 6954aff04b95d26be0d65a58557a9dfbef7811c3
+  AWSAuthCore: 288cb737a35ff031fbf42edaa8d0062328791d4e
+  AWSCognitoIdentityProvider: 4998bdbfbafe5038dae0237a598580e102e7b6b5
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: 2f0f88ae94a63a198274d683c7d0e18709d7090b
+  AWSMobileClient: bf1fb0868f9187141ca7b69220383c14878c0a29
+  AWSS3: 40d2f99d91e34999789a534d95c80cc7c1135c6d
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 18b41aa4da1bcfe13e4e50980d803aa39924963f
 
 COCOAPODS: 1.9.0

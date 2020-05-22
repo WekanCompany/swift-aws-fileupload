@@ -11,9 +11,9 @@ import UIKit
 import AWSS3
 
 /// The Cognito pool Identifier for the IAM user
-let s3CognitoIdentityPoolId: String = ""
+let s3CognitoIdentityPoolId: String = "us-east-1:42470987-3f6d-4268-889a-ea2bb05693e4"
 /// Name of the folder to which files should be uploaded
-let s3BucketName: String = ""
+let s3BucketName: String = "mvvm"
 ///  The region in which our identity pool exists
 let s3RegionType: AWSRegionType = .USEast1
 /// Name of file to be uploaded
